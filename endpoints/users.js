@@ -18,7 +18,7 @@ m.connect(mongoUrl, function(err) {
 })
 
 // mi perfil de usuario
-router.post('/login', function(req, res){
+router.post('/ingresar', function(req, res){
     // console.log('ya estoy frito')
     var userLogin = {
         email: req.body.email,
@@ -41,7 +41,7 @@ router.post('/login', function(req, res){
 })
 
 //	crea un nuevo user
-router.post('/register', function(req, res) {
+router.post('/registro', function(req, res) {
 
     var email = {
         email: req.body.email
