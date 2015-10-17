@@ -18,27 +18,27 @@ m.connect(mongoUrl, function(err) {
 })
 
 // mi perfil de usuario
-router.post('/', function(req, res){
-    // console.log('ya estoy frito')
-    var userLogin = {
-        email: req.body.email,
-        password: req.body.password
-    };
+// router.post('/', function(req, res){
+//     // console.log('ya estoy frito')
+//     var userLogin = {
+//         email: req.body.email,
+//         password: req.body.password
+//     };
 
-    usersModel.findOne(userLogin, function(err, user){
-        if (user){
-            console.log('ingreso!');
-            res.status(200).json(
-                user.email
-            );
-        }else{
-            console.log('no existis!')
-            res.status(400).json({
-                error: 'la clave o usuario son incorrectos'
-            })
-        }
-    })
-})
+//     usersModel.findOne(userLogin, function(err, user){
+//         if (user){
+//             console.log('ingreso!');
+//             res.status(200).json(
+//                 user.email
+//             );
+//         }else{
+//             console.log('no existis!')
+//             res.status(400).json({
+//                 error: 'la clave o usuario son incorrectos'
+//             })
+//         }
+//     })
+// })
 
 //	crea un nuevo user
 router.post('/', function(req, res) {
