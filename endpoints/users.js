@@ -1,5 +1,6 @@
 var express = require('express')
 var router = express.Router();
+// var myApi = 'https://proyectoairbnb.herokuapp.com';
 var mongoUrl = 'mongodb://admin:admin123@ds041581.mongolab.com:41581/base_de_prueba';
 var m = require('mongoose');
 var usersModel = require('../models/users')
