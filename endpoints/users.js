@@ -19,13 +19,16 @@ m.connect(mongoUrl, function(err) {
 
 // mi perfil de usuario
 router.post('/ingresar', function(req, res){
-    // console.log('ya estoy frito')
+    console.log('ya estoy frito')
     var userLogin = {
         email: req.body.email,
         password: req.body.password
     };
 
     usersModel.findOne(userLogin, function(err, user){
+        if (err){
+            console.log(err);
+        }
         if (user){
             console.log('ingreso!');
             res.status(200).json(
