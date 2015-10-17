@@ -1,7 +1,7 @@
 var express = require('express')
 var router = express.Router();
-// var myApi = 'https://proyectoairbnb.herokuapp.com';
-var mongoUrl = 'mongodb://admin:admin123@ds041581.mongolab.com:41581/base_de_prueba';
+var myApi = 'https://proyectoairbnb.herokuapp.com';
+// var mongoUrl = 'mongodb://admin:admin123@ds041581.mongolab.com:41581/base_de_prueba';
 var m = require('mongoose');
 var usersModel = require('../models/users')
 var mandrill = require('mandrill-api/mandrill');
@@ -9,7 +9,7 @@ var mandrill_client = new mandrill.Mandrill('MiSVDIb79G0b3CJE7cX8sw');
 // var jwt = require('jwt-simple');
 
 //	me conecta a la base de datos
-m.connect(mongoUrl, function(err) {
+m.connect(myApi, function(err) {
     if (err) {
         console.log('esta todo mal: ' + err);
     } else {
